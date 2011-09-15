@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<help>
+  <option>
+    <name><![CDATA[Automate a game]]>
+    </name>
+    <data><![CDATA[Which of these <em>best</em> fits your task?]]>
+    </data>
+    <option>
+      <name><![CDATA[Rapid fire a button while I hold down another]]>
+      </name>
+      <data><![CDATA[The following code will do this. <br/><br/> 
+      <code>~$LButton::
+    While GetKeyState("LButton","P"){
+        Click
+        Sleep 50  ;  milliseconds
+    }
+return</code> 
+<br/><br/> You may also want to see <a href="http://www.autohotkey.com/forum/topic69474.html">this thread</a>.]]>
+      </data>
+      <option>
+        <name><![CDATA[My question isn't answered]]>
+        </name>
+        <data><![CDATA[Consider posting in <a href="http://www.autohotkey.com/forum/viewforum.php?f=1">Ask for Help</a> on the AutoHotkey forum]]>
+        </data>
+      </option>
+    </option>
+    <option>
+      <name><![CDATA[Use one key as a toggle (e.g., a lightswitch) for an action]]>
+      </name>
+      <data><![CDATA[Which of these <em>best</em> fits your task?]]>
+      </data>
+      <option>
+        <name><![CDATA[The key is a modifier (shift, alt, control or windows key)]]>
+        </name>
+        <data><![CDATA[Try this:
+<code>shift::
+toggle := !toggle ; This is my comment
+send % toggle ? "{k down}" : "{k up}"
+return</code>]]>
+        </data>
+      </option>
+      <option>
+        <name><![CDATA[Something else...]]>
+        </name>
+        <data><![CDATA[Try this well thought out code:
+<code>Msgbox, Is it working yet?
+Sleep 3000
+Msgbox, ...How about now?</code>]]>
+        </data>
+      </option>
+    </option>
+  </option>
+</help>
