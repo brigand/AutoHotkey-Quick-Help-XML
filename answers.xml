@@ -50,4 +50,89 @@ Msgbox, ...How about now?</code>]]>
       </option>
     </option>
   </option>
+  <option>
+    <name><![CDATA[Work with files.]]>
+    </name>
+    <data><![CDATA[What do you want to do with the file or files?]]>
+    </data>
+    <option>
+      <name><![CDATA[List all the files in a folder.]]>
+      </name>
+      <data><![CDATA[The following code will do this. <br/><br/> 
+      <code>Loop, FolderNameGoesHere\*.txt ;loop through all the text files in FolderNameGoesHere
+{
+    ;do something with the file here
+}</code> 
+<br/><br/> For more information about what data is available to the code inside the loop, see the <a  href="http://www.autohotkey.com/docs/commands/LoopFile.htm">Filepattern Loop</a> page.]]>
+      </data>
+    </option>
+    <option>
+      <name><![CDATA[Change a file's properties.]]>
+      </name>
+      <data><![CDATA[What changes do you want to make to the file?]]>
+      </data>
+      <option>
+        <name><![CDATA[Create a new file.]]>
+        </name>
+        <data><![CDATA[Use <ahref="http://www.autohotkey.net/docs/commands/FileAppend.htm">FileAppend</a> to create a file:
+
+<code>FileAppend, TextToAppend, FileNameGoesHere.txt</code>
+
+<em>TextToAppend</em> may be blank, in which case a blank file would be created. Otherwise, the file will contain the text.]]>
+        </data>
+      </option>
+      <option>
+        <name><![CDATA[Delete a file.]]>
+        </name>
+        <data><![CDATA[Use the <a href="http://www.autohotkey.net/docs/commands/FileDelete.htm">FileDelete command</a> to delete files:
+
+<code>FileDelete, TheFileToDelete.txt ;delete a file named "TheFileToDelete.txt"</code>]]>
+        </data>
+      </option>
+      <option>
+        <name><![CDATA[Rename a file.]]>
+        </name>
+        <data><![CDATA[The <a href="http://www.autohotkey.com/docs/commands/FileMove.htm">FileDelete command</a> can either move or delete a file:
+
+<code>FileMove, TheOriginalFile, ThePlaceToMoveItTo</code>
+
+If the destination is the same folder as the source, the file is renamed. Otherwise the file is moved.]]>
+        </data>
+      </option>
+    </option>
+    <option>
+      <name><![CDATA[Read or modify a file.]]>
+      </name>
+      <data><![CDATA[Read or modify?]]>
+      </data>
+      <option>
+        <name><![CDATA[Read.]]>
+        </name>
+        <data><![CDATA[The <ahref="http://www.autohotkey.net/docs/commands/FileRead.htm">FileRead</a> command reads the contents of a file:
+
+<code>FileRead, FileContents, SomeFile.txt ;read the file's contents
+MsgBox, %FileContents% ;show the contents of the file</code>]]>
+        </data>
+      </option>
+      <option>
+        <name><![CDATA[Modify.]]>
+        </name>
+        <data><![CDATA[Use <ahref="http://www.autohotkey.net/docs/commands/FileAppend.htm">FileAppend</a> to append text to a file:
+
+<code>FileAppend, TextToAppend, FileNameGoesHere.txt ;append "TextToAppend" to "FileNameGoesHere.txt"</code>
+
+To overwrite the contents of the file, delete it first:
+
+<code>FileDelete, FileNameGoesHere.txt ;delete the file before writing it
+FileAppend, TextToAppend, FileNameGoesHere.txt ;append "TextToAppend" to "FileNameGoesHere.txt"</code>]]>
+        </data>
+      </option>
+    </option>
+    <option>
+      <name><![CDATA[My question isn't answered.]]>
+      </name>
+      <data><![CDATA[Consider posting in <a href="http://www.autohotkey.com/forum/viewforum.php?f=1">Ask for Help</a> on the AutoHotkey forum.]]>
+      </data>
+    </option>
+  </option>
 </help>
